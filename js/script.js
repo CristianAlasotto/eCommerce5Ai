@@ -25,18 +25,15 @@ function controllaDati() {
 document
     .getElementById("submit-btn")
     .addEventListener("click", confermaRegistrazione);
-function confermaRegistrazione(e) {
-    e.preventDefault();
 
-    console.log(e.target);
-
+function confermaRegistrazione() {
     if (controllaDati()) {
         console.log("dato valido");
 
         $.ajax({
             url: "./ajaxScripts/salvaUtente.php",
             type: "POST",
-            data: campiRegJson,
+            data: JSON.stringify(campiRegJson),
             contentType: "application/json; charset=utf-8",
             success: function (response) {
                 alert(response.status);

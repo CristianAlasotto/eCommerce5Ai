@@ -65,7 +65,7 @@
 
                             <div class="userFields">
                                 partita iva
-                                <input type="text" id="partitaIVA" class="datiUtente">
+                                <input type="text" id="userPartIVA" class="datiUtente">
                             </div>
 
                             <div class="userFields">
